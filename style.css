@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,700&family=Lexend+Deca&display=swap');
+
+
+:root{
+    --bright-orange:hsl(31, 77%, 52%);
+    --dark-cyan:hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+}
+
+.container{
+    width: 90%;
+    height: 400px;
+    margin: 100px;
+    background-color: #eee;
+    border-radius: 12px;
+    display: flex;
+}
+@media(max-width: 767px){
+    .container{
+        flex-direction: column;
+        height: 185vh;
+        margin: 10px auto;
+    }
+}
+
+.cal{
+width: calc(100% /3 );
+padding-left: 35px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+@media(max-width: 767px){
+    .cal{
+       width: 100%;
+       height: 500px;
+
+    }
+}
+
+.cal .title{
+color: #fff;
+text-transform: uppercase;
+letter-spacing: -3px;
+font-weight: normal;
+}
+
+.cal .text{
+color: #fff;
+line-height: 1.4;
+}
+
+
+.cal button{
+width: 50%;
+padding: 10px 0;
+border-radius: 25px;
+font-size: 15px;
+border: 2px solid #eee;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.cal:first-child{
+background-color: var(--bright-orange);
+border-radius: 12px 0 0 12px;
+} 
+
+@media(max-width: 767px){
+    .cal:first-child{
+       border-radius: 12px 12px 0 0;
+       
+    }
+}
+
+.cal:nth-child(2){
+background-color: var(--dark-cyan);
+}
+.cal:last-child{
+background-color: var(--Very-dark-cyan);
+border-radius: 0 12px 12px 0;
+}
+
+@media(max-width: 767px){
+    .cal:last-child{
+       border-radius: 0 0 12px 12px;
+       
+    }
+}
+
+.cal:first-child button{
+    color: var(--bright-orange);
+   
+}
+
+.cal:first-child button:hover{
+    background-color: var(--bright-orange);
+    color: #eee;
+}
+
+.cal:nth-child(2) button{
+color: var(--dark-cyan);
+
+}
+
+.cal:nth-child(2) button:hover{
+    background-color: var(--dark-cyan);
+    color: #fff;
+}
+
+.cal:last-child button{
+    color: var(--Very-dark-cyan);
+    
+}
+
+.cal:last-child button:hover{
+    background-color: var(--Very-dark-cyan);
+    color: #fff;
+}
